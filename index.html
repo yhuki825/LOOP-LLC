@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--
+================================================================
+合同会社LOOP ブランドサイト デザイン案
+  コンセプト：「手渡しでできた、ひとつの輪。」
+    社名の「LOOP（輪・めぐり）」から着想。人から人へ手渡されていく信頼と、
+    手放されたモノが次の人へめぐるリユース・リサイクルの循環を、ひとつの輪として描いています。
+    ・ヒーロー：円い枠の中で、輪の上を人の粒がめぐり、光が隣から隣へ手渡されていくCanvas。
+      内側では小さなモノの粒が逆向きにめぐる（リユースの循環）
+    ・右端のスクロールレール：読み進めるほど一つずつ連なっていく鎖の輪（つながり）
+    ※代表者のお名前・所在地・地名から着想した要素は採用していません。
+  デプロイ：Cloudflare Pages（Direct Upload）にこのファイルをそのままアップロード。
+            ビルド不要。外部依存は Google Fonts と Unsplash 画像のみ。
+
+  ■ 公開前の確認事項（チェックリスト）
+  [ ] 1. 【確認事項】社名の解釈（LOOP＝輪・めぐり）は本案のデザイン上の読みです。正しい由来をご確認ください
+  [ ] 2. 【確認事項】キャッチコピー「つながりを、次の手へ。」は仮案です
+  [ ] 3. 【確認事項】英字ロゴ「LOOP」は商号表記をテキストで組んだ仮ロゴです
+  [ ] 4. 【確認事項】「人と人とのつながりを活かした広告企画事業」の具体的な手法は記載していません（説明は仮案）
+  [ ] 5. 【確認事項】対面営業を活用したプロモーション支援の内容（店頭・訪問・イベント等）は一般的な表現に留めています
+  [ ] 6. 【確認事項】「リユース・リサイクル会社に特化」はCSVの記載どおり。支援先の業態・地域・実績は記載していません
+  [ ] 7. 【確認事項】訪問を伴う営業を行う場合、特定商取引法（訪問販売・訪問購入）の扱いについて支援先との役割分担をご確認ください
+  [ ] 8. 【確認事項】「考え方」「強み」「進め方」「代表メッセージ」の文章は仮案（草案）です
+  [ ] 9. 【確認事項】代表者の役職名（合同会社のため「代表社員」と仮置き）。代表メッセージの署名には氏名を入れていません
+  [ ] 10.【確認事項】設立年月日・資本金・従業員数 … 未確認のため会社概要ではコメントアウト
+  [ ] 11.【確認事項】所在地・代表者名は会社概要にのみ記載。公開可否をご確認ください
+  [ ] 12.【確認事項】画像はUnsplashのフリー素材（仮）
+         1521791136064-7986c2920216 / 1528605248644-14dd04022da1 / 1551232864-3f0890e580d9 / 1600880292203-757bb62b4baf
+  [ ] 13. OGP画像・favicon・公開URL
+  ※ ご依頼に合わせ、連絡用フォーム・連絡窓口の案内エリア・代表者写真は設けていません
+================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>合同会社LOOP｜人のつながりを活かした広告企画と、リユース・リサイクル会社のプロモーション支援</title>
+<meta name="description" content="合同会社LOOPは、人と人とのつながりを活かした広告企画事業と、リユース・リサイクル会社に特化した対面営業を活用したプロモーション支援を行う広告マーケティングの会社です。">
+<meta property="og:title" content="合同会社LOOP｜人のつながりを活かした広告企画と、リユース・リサイクル会社のプロモーション支援">
+<meta property="og:description" content="合同会社LOOPは、人と人とのつながりを活かした広告企画事業と、リユース・リサイクル会社に特化した対面営業を活用したプロモーション支援を行う広告マーケティングの会社です。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<!-- 要確認：og:url / og:image は公開ドメイン確定後に設定 -->
+<meta name="theme-color" content="#191B15">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23191B15'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2373C28C' stroke-width='1.6'/%3E%3Ccircle cx='25' cy='16' r='2.6' fill='%23ECEEE4'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--base:#191B15;       /* オリーブの墨 */
+  --base-2:#21241C;
+  --base-deep:#13150F;
+  --text:#ECEEE4;
+  --text2:#CDD0C2;
+  --mute:#9CA190;
+  --accent:#73C28C;     /* --leaf：めぐる若葉 */
+  --line:rgba(236,238,228,.14);
+  --hdr:rgba(25,27,21,.88);
+  --menu:rgba(25,27,21,.97);
+  --fallback:repeating-radial-gradient(circle at 50% 50%,rgba(115,194,140,.14) 0 1px,transparent 1px 26px),#21241C;
+  --serif:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --latin:"Cormorant Garamond","Times New Roman",serif;
+  --num:"Cormorant Garamond","Times New Roman",serif;
+  --hh:72px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.04em;word-break:auto-phrase;text-wrap:pretty;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.nw{display:inline-block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--accent);color:var(--base);padding:10px 16px;text-decoration:none;font-weight:700}
+.skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1160px,100% - 48px);margin:0 auto}
+.sec{position:relative;padding:clamp(96px,14vw,176px) 0}
+/* header */
+.header{position:fixed;inset:0 0 auto 0;z-index:100;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid transparent;transition:background .45s,border-color .45s,backdrop-filter .45s}
+.header.is-scrolled{background:var(--hdr);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
+.header__in{width:min(1240px,100% - 40px);margin:0 auto;height:var(--hh);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{width:32px;height:32px;flex:none}
+.logo__txt{font-family:var(--serif);font-weight:600;font-size:17px;letter-spacing:.14em;line-height:1.25}
+.logo__txt small{display:block;font-family:var(--latin);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--mute)}
+.gnav ul{display:flex;gap:clamp(18px,2.4vw,34px)}
+.gnav a{position:relative;display:block;padding:6px 0;font-size:13px;letter-spacing:.13em;text-decoration:none}
+.gnav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.gnav a:hover::after,.gnav a:focus-visible::after{transform:scaleX(1)}
+.menu-btn{display:none;background:none;border:0;color:var(--text);width:44px;height:44px;cursor:pointer;position:relative;flex:none}
+.menu-btn span{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s}
+.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:22px}.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:900px){
+  .menu-btn{display:block;z-index:120}
+  .gnav{position:fixed;inset:0;background:var(--menu);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;z-index:110}
+  .gnav.is-open{opacity:1;visibility:visible}
+  .gnav ul{flex-direction:column;align-items:center;gap:26px}
+  .gnav a{font-family:var(--serif);font-size:20px;letter-spacing:.16em}
+}
+/* rail */
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);height:52vh;width:30px;z-index:90;pointer-events:none}
+@media (max-width:820px){.rail{display:none}}
+/* hero entrance (class toggle) */
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero [data-in]{opacity:0;transform:translateY(14px);transition:opacity 1.2s cubic-bezier(.22,.7,.2,1),transform 1.2s cubic-bezier(.22,.7,.2,1)}
+.is-loaded .hero [data-in]{opacity:1;transform:none}
+.is-loaded .hero [data-in="2"]{transition-delay:.4s}
+.is-loaded .hero [data-in="3"]{transition-delay:.85s}
+.is-loaded .hero [data-in="4"]{transition-delay:1.25s}
+.cue{position:absolute;left:50%;bottom:26px;width:1px;height:54px;background:var(--line);overflow:hidden}
+.cue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--text);animation:drop 2.4s ease-in-out infinite}
+@keyframes drop{to{top:100%}}
+/* reveal (only when JS runs) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.22,.7,.2,1),transform 1s cubic-bezier(.22,.7,.2,1)}
+.js .reveal.is-in{opacity:1;transform:none}
+/* photo frames */
+.ph{position:relative;overflow:hidden;background:var(--fallback)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.is-fallback{background:var(--fallback)}
+/* band */
+.band{position:relative;height:clamp(260px,42vw,520px);overflow:hidden;margin:0}
+.band img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;filter:saturate(.72) brightness(.66);will-change:transform}
+.band figcaption{position:absolute;left:0;right:0;bottom:clamp(28px,5vw,56px);width:min(1160px,100% - 48px);margin:0 auto;font-family:var(--serif);font-size:clamp(18px,2.4vw,28px);letter-spacing:.14em;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+/* business rows */
+.biz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.biz + .biz{margin-top:clamp(72px,10vw,128px)}
+.biz:nth-of-type(even) .biz__media{order:2}
+.biz__media{aspect-ratio:4/3}
+.biz__media img{filter:saturate(.78);transform:scale(1.06);transition:transform 2s cubic-bezier(.2,.6,.2,1)}
+.biz.is-in .biz__media img{transform:scale(1)}
+.biz__kind{font-size:13px;letter-spacing:.16em;color:var(--accent)}
+.biz h3{font-family:var(--serif);font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:.1em;line-height:1.6;margin:10px 0 18px}
+.biz p{max-width:30em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:4px 13px;font-size:12.5px;letter-spacing:.08em}
+@media (max-width:900px){.biz{grid-template-columns:minmax(0,1fr)}.biz:nth-of-type(even) .biz__media{order:0}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.4vw,32px);position:relative;margin-top:clamp(40px,6vw,72px)}
+.steps::before{content:"";position:absolute;left:0;right:0;top:11px;height:1px;background:var(--line)}
+.steps::after{content:"";position:absolute;left:0;top:11px;height:1px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 2.4s cubic-bezier(.6,.1,.2,1)}
+.steps.is-in::after{transform:scaleX(1)}
+.step{position:relative;padding-top:44px}
+.step__dot{position:absolute;left:0;top:0;width:23px;height:23px;border-radius:50%;border:1px solid var(--mute);background:var(--base);display:grid;place-items:center}
+.step__dot::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.steps.is-in .step__dot::after{transform:scale(1)}
+.steps.is-in .step:nth-child(2) .step__dot::after{transition-delay:.6s}
+.steps.is-in .step:nth-child(3) .step__dot::after{transition-delay:1.2s}
+.steps.is-in .step:nth-child(4) .step__dot::after{transition-delay:1.8s}
+.step__no{font-family:var(--num);font-size:13px;color:var(--accent);letter-spacing:.12em}
+.step h3{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.14em;margin:6px 0 2px}
+.step small{display:block;font-size:12px;color:var(--mute);letter-spacing:.12em;margin-bottom:10px}
+.step p{font-size:15px}
+@media (max-width:900px){
+  .steps{grid-template-columns:minmax(0,1fr);gap:0;padding-left:40px}
+  .steps::before,.steps::after{left:11px;right:auto;top:10px;bottom:10px;width:1px;height:auto}
+  .steps::after{transform:scaleY(0);transform-origin:top}
+  .steps.is-in::after{transform:scaleY(1)}
+  .step{padding:0 0 36px}
+  .step__dot{left:-40px}
+}
+/* values */
+.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--line)}
+.values li{padding:32px clamp(18px,2.6vw,36px) 8px;border-left:1px solid var(--line)}
+.values li:first-child{border-left:0;padding-left:0}
+.values h3{font-family:var(--serif);font-weight:600;font-size:clamp(19px,2vw,23px);letter-spacing:.12em;line-height:1.6;margin-bottom:12px}
+.values p{font-size:15px;color:var(--text2)}
+@media (max-width:860px){.values{grid-template-columns:minmax(0,1fr)}.values li,.values li:first-child{border-left:0;padding:26px 0 22px;border-bottom:1px solid var(--line)}}
+/* message */
+.msg{display:flex;flex-direction:row-reverse;gap:clamp(40px,6vw,90px);justify-content:center;align-items:flex-start}
+.msg__title{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(28px,3vw,40px);letter-spacing:.2em;line-height:1.7;flex:none}
+.msg__title small{display:block;font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:.24em;color:var(--mute);margin-right:1.2em}
+.msg__body{writing-mode:vertical-rl;font-family:var(--serif);font-size:16px;line-height:2.3;letter-spacing:.14em;height:30em;max-width:100%;overflow-x:auto}
+.msg__body p{margin:0 0 0 1.6em}
+.msg__body p.first{font-size:1.25em}
+.msg__sign{text-align:end;color:var(--text2);font-size:14px;letter-spacing:.24em}
+@media (max-width:860px){
+  .msg{flex-direction:column;gap:32px}
+  .msg__title,.msg__body{writing-mode:horizontal-tb;height:auto}
+  .msg__title small{margin:10px 0 0}
+  .msg__body{line-height:2.1;letter-spacing:.06em}
+  .msg__body p{margin:0 0 1.4em}
+  .msg__sign{text-align:right}
+}
+/* profile */
+.profile-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:clamp(40px,7vw,110px);align-items:start}
+.profile{width:100%;border-collapse:collapse;font-size:15px}
+.profile th,.profile td{text-align:left;vertical-align:top;padding:22px 0;border-bottom:1px solid var(--line);font-weight:400}
+.profile tr:first-child th,.profile tr:first-child td{border-top:1px solid var(--line)}
+.profile th{width:9em;color:var(--mute);font-size:14px;letter-spacing:.14em;padding-right:24px}
+.profile td li{position:relative;padding-left:1.1em}
+.profile td li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;background:var(--accent);border-radius:var(--bullet-r,50%)}
+dl.profile{margin:0;border-top:1px solid var(--line)}
+dl.profile > div{display:grid;grid-template-columns:9em minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+dl.profile dt{color:var(--mute);font-size:14px;letter-spacing:.14em}
+dl.profile dd li{position:relative;padding-left:1.1em}
+dl.profile dd li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;background:var(--accent);border-radius:var(--bullet-r,50%)}
+@media (max-width:760px){
+  .profile-grid{grid-template-columns:minmax(0,1fr)}
+  .profile th,.profile td{display:block;width:auto;padding:0}
+  .profile th{padding-top:20px;border-bottom:0}
+  .profile td{padding:4px 0 20px}
+  .profile tr:first-child td{border-top:0}
+  dl.profile > div{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+/* footer */
+.footer{padding:72px 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--base-deep)}
+.footer__in{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px}
+.footer__tag{font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);letter-spacing:.18em;margin-top:16px}
+.footer nav ul{display:flex;flex-wrap:wrap;gap:8px 22px}
+.footer nav a{font-size:12.5px;color:var(--mute);text-decoration:none;letter-spacing:.12em;transition:color .3s}
+.footer nav a:hover{color:var(--text)}
+.footer__copy{display:block;margin-top:40px;font-family:var(--latin);font-size:12.5px;color:var(--mute);letter-spacing:.1em}
+/* drawn svg */
+.draw .ln{fill:none;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.45,.05,.2,1) .3s}
+.draw .ln.d2{transition-delay:.8s}.draw .ln.d3{transition-delay:1.3s}.draw .ln.d4{transition-delay:1.8s}
+.draw .pop{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .8s,transform .8s cubic-bezier(.3,1.6,.5,1)}
+.draw .lbl{opacity:0;transition:opacity 1s 1.8s}
+.draw.is-in .ln{stroke-dashoffset:0}
+.draw.is-in .pop{opacity:1;transform:none}
+.draw.is-in .lbl{opacity:1}
+.draw .pop.p2{transition-delay:.7s}.draw .pop.p3{transition-delay:1.2s}.draw .pop.p4{transition-delay:1.7s}.draw .pop.p5{transition-delay:2.2s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal,.hero [data-in]{opacity:1;transform:none}
+  .steps::after{transform:none}.step__dot::after{transform:scale(1)}
+  .draw .ln{stroke-dashoffset:0}.draw .pop,.draw .lbl{opacity:1;transform:none}
+  .biz__media img{transform:none}
+}
+
+
+.step__no{font-size:19px;font-style:italic}
+.logo svg circle{fill:none;stroke:var(--accent);stroke-width:1.6}
+.logo svg circle+circle{fill:var(--text);stroke:none}
+.logo__txt{font-family:var(--latin);font-weight:500;font-size:24px;letter-spacing:.22em}
+.logo__txt small{font-family:var(--sans);font-size:10px;letter-spacing:.24em}
+/* heading H5: JA + hollow ring glyph */
+.h2{display:flex;align-items:center;gap:.5em;font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,38px);letter-spacing:.14em;line-height:1.55}
+.h2::before{content:"";flex:none;width:.5em;height:.5em;border-radius:50%;border:1.5px solid var(--accent)}
+.h2.multi{align-items:flex-start}.h2.multi::before{margin-top:.55em}
+.lead{color:var(--text2);max-width:34em;margin-top:22px}
+/* hero D: disc */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:clamp(32px,5vw,72px);width:min(1160px,100% - 140px);margin:0 auto;padding:110px 0 80px;overflow:visible}
+.hero__disc{position:relative;aspect-ratio:1/1;width:100%;max-width:580px;justify-self:center;border-radius:50%;background:radial-gradient(circle,#252a1f 0%,var(--base) 70%)}
+.hero__disc::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--line)}
+.hero__disc canvas{border-radius:50%}
+.hero__disc span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--latin);font-style:italic;font-size:clamp(28px,3.4vw,44px);color:var(--text);letter-spacing:.12em;pointer-events:none}
+.hero__text{display:flex;gap:clamp(28px,4vw,56px);justify-content:flex-end;align-items:flex-start}
+.hero h1{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(38px,4.6vw,64px);letter-spacing:.22em;line-height:1.6;flex:none}
+.hero h1 span{display:block}.hero h1 span+span{padding-top:2.8em}
+.hero__side{max-width:18rem;padding-top:6rem}
+.hero__kind{font-size:12.5px;letter-spacing:.2em;color:var(--accent);margin-bottom:10px}
+.hero__side p{font-size:15px;color:var(--text2);line-height:2}
+.hand{margin-top:26px;border-top:1px solid var(--line)}
+.hand a{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;text-decoration:none;transition:padding .4s}
+.hand a:hover,.hand a:focus-visible{padding-left:8px}
+.hand a::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;border:1px solid var(--accent);transform:translateY(-1px)}
+@media (max-width:960px){
+  .hero{grid-template-columns:minmax(0,1fr);width:min(1160px,100% - 48px);padding-top:100px;gap:40px}
+  .hero__disc{max-width:340px}
+  .hero__text{flex-direction:column;gap:22px}
+  .hero h1{writing-mode:horizontal-tb;font-size:clamp(32px,9vw,44px);letter-spacing:.1em}
+  .hero h1 span+span{padding:0 0 0 1.2em}
+  .hero__side{padding-top:0;max-width:none}
+}
+/* rail: chain links */
+.rail{width:30px}
+.rail__line{position:absolute;left:14px;top:0;bottom:0;width:1px;background:var(--line)}
+.rail__link{position:absolute;left:8px;width:13px;height:22px;margin-top:-11px;border:1.5px solid rgba(236,238,228,.25);border-radius:7px;transition:border-color .4s,transform .5s cubic-bezier(.3,1.6,.5,1)}
+.rail__link:nth-child(even){width:8px;left:10px;border-radius:5px}
+.rail__link.is-on{border-color:var(--accent);transform:scale(1.12)}
+.rail__read{position:absolute;left:-10px;bottom:-32px;font-family:var(--latin);font-style:italic;font-size:13px;color:var(--mute);white-space:nowrap}
+/* concept */
+.concept{background:var(--base-2)}
+.concept__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);align-items:center}
+.concept p+p{margin-top:1.3em}
+.ring-fig{width:100%;max-width:440px;margin:0 auto;overflow:visible}
+.ring-fig .ln{stroke-width:1.4}
+.ring-fig text{font-family:var(--sans);font-size:14px;fill:var(--text);letter-spacing:.14em}
+.ring-fig .en{font-family:var(--latin);font-style:italic;font-size:15px;fill:var(--accent)}
+.ring-fig .orbit{transform-origin:220px 220px;animation:orbit 14s linear infinite;animation-play-state:paused}
+.ring-fig.is-in .orbit{animation-play-state:running}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.keys{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.keys li{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:13px;letter-spacing:.1em}
+.keys li b{font-family:var(--latin);font-style:italic;font-weight:500;color:var(--accent);margin-right:8px}
+@media (max-width:900px){.concept__grid{grid-template-columns:minmax(0,1fr)}}
+.biz__media{aspect-ratio:1/1;border-radius:50%}
+.biz{grid-template-columns:minmax(0,.85fr) minmax(0,1fr)}
+@media (max-width:900px){.biz{grid-template-columns:minmax(0,1fr)}.biz__media{max-width:360px;width:100%}}
+.flow{background:var(--base-deep)}
+.loop-back{display:flex;align-items:center;gap:10px;margin-top:6px;font-family:var(--latin);font-style:italic;font-size:17px;color:var(--mute)}
+.loop-back svg{width:24px;height:24px;fill:none;stroke:var(--accent);stroke-width:1.4}
+.company-photo{aspect-ratio:1/1;max-width:280px;border-radius:50%;margin-top:36px}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="header" id="header">
+  <div class="header__in">
+    <a class="logo" href="#top" aria-label="合同会社LOOP トップへ"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><circle cx="26" cy="16" r="2.8"/></svg><span class="logo__txt">LOOP<small>合同会社LOOP</small></span><!-- 【確認事項】英字ロゴは商号表記をテキストで組んだ仮ロゴです --></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="gnav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="gnav" id="gnav" aria-label="メインメニュー"><ul><li><a href="#concept">考え方</a></li><li><a href="#business">事業内容</a></li><li><a href="#strength">強み</a></li><li><a href="#flow">進め方</a></li><li><a href="#message">代表メッセージ</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+  </div>
+</header>
+<div class="rail" id="rail" aria-hidden="true"><div class="rail__line"></div><span class="rail__read" id="railRead">link 00</span></div>
+<main id="main">
+<section class="hero" id="top" aria-label="メインビジュアル">
+  <div class="hero__disc" data-in="1">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <span aria-hidden="true">loop</span>
+  </div>
+  <div class="hero__text">
+    <div class="hero__side" data-in="3">
+      <p class="hero__kind">広告マーケティング業</p>
+      <p>人と人とのつながりを活かした広告企画と、<span class="nw">リユース・リサイクル会社に特化した、</span><span class="nw">対面営業によるプロモーション支援を行っています。</span></p>
+      <ul class="hand" aria-label="事業一覧">
+        <li><a href="#biz-ad">つながりを活かした広告企画</a></li>
+        <li><a href="#biz-reuse">リユース・リサイクル会社のプロモーション支援</a></li>
+      </ul>
+    </div>
+    <!-- 【確認事項】キャッチコピーは仮案です -->
+    <h1 data-in="2"><span>つながりを、</span><span>次の手へ。</span></h1>
+  </div>
+</section>
+
+<section class="sec concept" id="concept" aria-labelledby="concept-h">
+  <div class="wrap concept__grid">
+    <div class="reveal">
+      <h2 class="h2 multi" id="concept-h">輪は、<br>手渡しでできている。</h2>
+      <!-- 【確認事項】考え方の文章と社名の解釈は仮案です -->
+      <p class="lead">モノを手放す人と、それを受け取り、次へ届ける会社。そのあいだをつなぐのは、いつの時代も人と人との信頼です。</p>
+      <p style="margin-top:22px">LOOPは、画面の向こうに届ける広告だけでなく、人のつながりや対面でのコミュニケーションを活かした広告企画を手がけています。</p>
+      <p>なかでも、リユース・リサイクル会社に特化したプロモーション支援に力を入れています。直接会って伝えることで、サービスの価値をより確かに届ける。ひとりから次のひとりへと、信頼が手渡されていく輪をつくることが、私たちの仕事です。</p>
+      <!-- 【確認事項】3つのキーワードは仮の整理です -->
+      <ul class="keys"><li><b>people</b>人のつながり</li><li><b>face</b>対面でのプロモーション</li><li><b>reuse</b>リユース・リサイクル</li></ul>
+    </div>
+    <div class="reveal"><svg class="ring-fig draw" id="ringFig" viewBox="0 0 440 440" role="img" aria-label="人、企画、対面、次の人の四つが一つの輪になってめぐる図">
+  <circle class="ln" pathLength="1" cx="220" cy="220" r="150" fill="none" stroke="var(--accent)"/>
+  <circle class="ln d2" pathLength="1" cx="220" cy="220" r="96" fill="none" stroke="var(--line)" stroke-dasharray="1"/>
+  <g class="orbit"><circle cx="220" cy="70" r="5" fill="var(--text)"/></g>
+  <circle class="pop p2" cx="220" cy="70" r="9" fill="var(--base-2)" stroke="var(--accent)"/>
+  <circle class="pop p3" cx="370" cy="220" r="9" fill="var(--base-2)" stroke="var(--accent)"/>
+  <circle class="pop p4" cx="220" cy="370" r="9" fill="var(--base-2)" stroke="var(--accent)"/>
+  <circle class="pop p5" cx="70" cy="220" r="9" fill="var(--accent)"/>
+  <text class="lbl en" x="220" y="26" text-anchor="middle">people</text><text class="lbl" x="220" y="48" text-anchor="middle">人</text>
+  <text class="lbl en" x="386" y="206">plan</text><text class="lbl" x="386" y="230">企画</text>
+  <text class="lbl en" x="220" y="422" text-anchor="middle">face to face</text><text class="lbl" x="220" y="400" text-anchor="middle">対面</text>
+  <text class="lbl en" x="6" y="206">next</text><text class="lbl" x="6" y="230">次の人</text>
+  <text class="lbl en" x="196" y="226" style="font-size:22px">again</text>
+</svg></div>
+  </div>
+</section>
+
+<figure class="band" aria-label="大勢の人がテーブルを囲んで語り合う様子">
+  <!-- 画像：Unsplash（仮）。差し替え推奨 -->
+  <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=2000&q=72" alt="" loading="lazy" aria-hidden="true" onerror="this.parentNode.classList.add('is-fallback');this.remove()">
+  <figcaption>信頼は、人から人へしか渡らない。</figcaption>
+</figure>
+
+<section class="sec" id="business" aria-labelledby="biz-h">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 class="h2" id="biz-h">事業内容</h2>
+      <p class="lead">広告マーケティング業として、ふたつの事業を行っています。</p>
+    </div>
+    <!-- 【確認事項】各事業の説明文・タグはCSVに無い補足です -->
+    <article class="biz" id="biz-ad" style="margin-top:clamp(56px,8vw,96px)">
+      <figure class="biz__media ph"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=72" alt="ビジネスパートナー同士が握手を交わす様子" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+      <div>
+        <p class="biz__kind">Advertising Planning</p>
+        <h3>人と人とのつながりを<br>活かした広告企画事業</h3>
+        <p>人の紹介や関係性、仲間のつながりを起点にした広告を企画します。信頼のある人から伝わることで、情報がより自然に届くかたちを考えます。</p>
+        <ul class="tags"><li>広告企画</li><li>つながりを活かした告知</li></ul>
+      </div>
+    </article>
+    <article class="biz" id="biz-reuse">
+      <figure class="biz__media ph"><img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=1000&q=72" alt="ハンガーラックに掛けられた衣類" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+      <div>
+        <!-- 【確認事項】支援先の業態・実績は記載していません -->
+        <p class="biz__kind">Reuse &amp; Recycle Promotion</p>
+        <h3>リユース・リサイクル会社に<br>特化したプロモーション支援</h3>
+        <p>リユース・リサイクル会社に特化し、対面営業を活用したプロモーションを支援します。サービスの魅力を、人の言葉で、直接お客さまへ届けます。</p>
+        <ul class="tags"><li>対面営業の活用</li><li>プロモーション支援</li><li>リユース・リサイクル特化</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="strength" aria-labelledby="str-h" style="background:var(--base-2)">
+  <div class="wrap">
+    <div class="reveal"><h2 class="h2" id="str-h">LOOPの強み</h2></div>
+    <!-- 【確認事項】強みの文章は仮案です -->
+    <ul class="values reveal"><li><h3>対面で伝える力</h3><p>直接会って話すからこそ伝わる安心感を、プロモーションに活かします。</p></li><li><h3>業界に特化した理解</h3><p>リユース・リサイクル会社に絞ることで、業界ならではの事情に寄り添った支援を目指します。</p></li><li><h3>つながりを広げる企画</h3><p>一人のつながりが次の人へ広がっていくよう、広告を企画します。</p></li></ul>
+  </div>
+</section>
+
+<section class="sec flow" id="flow" aria-labelledby="flow-h">
+  <div class="wrap">
+    <div class="reveal"><h2 class="h2" id="flow-h">支援の進め方</h2></div>
+    <!-- 【確認事項】進め方は仮の流れです（実際の手順なので番号を使用） -->
+    <ol class="steps" id="steps">
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">01</span><h3>聴く</h3><small>ヒアリング</small><p>事業の内容と、届けたいお客さまをお聞きします。</p></li>
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">02</span><h3>結ぶ</h3><small>企画</small><p>つながりや対面を活かした広告・プロモーションを考えます。</p></li>
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">03</span><h3>届ける</h3><small>現場</small><p>対面営業を活用し、サービスの価値を届けます。</p></li>
+<li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">04</span><h3>めぐらせる</h3><small>振り返り</small><p>結果を共有し、次の取り組みにつなげます。</p></li>
+</ol>
+    <p class="loop-back reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12a7 7 0 1 1-2.05-4.95"/><path d="M19 4v4h-4"/></svg>and again ― 次のつながりへ。</p>
+  </div>
+</section>
+
+<section class="sec" id="message" aria-labelledby="msg-h">
+  <!-- 【確認事項】代表メッセージは草案です。代表者ご本人の確認・修正を経て公開してください。署名欄の氏名は入れていません -->
+  <div class="wrap">
+    <div class="msg reveal"><h2 class="msg__title" id="msg-h">顔の見える広告が、<br>輪を動かす。<small>代表メッセージ</small></h2><div class="msg__body"><p class="first">いいサービスほど、人の口から伝わっていきます。</p><p>リユースやリサイクルの仕事は、手放す方の安心があってはじめて成り立ちます。その安心は、広告の言葉だけではなかなか届きません。会って、話して、信頼してもらう。その積み重ねが、モノがめぐる仕組みを支えています。</p><p>LOOPは、人と人とのつながりを起点にした広告と、対面でのプロモーションで、その信頼づくりを手伝います。ひとりのお客さまとの出会いが、次のお客さまへとつながっていくように。</p><p>一つひとつの手渡しを大切に、めぐる輪を広げていきます。</p><p class="msg__sign">代表社員　松山 勇也</p></div></div>
+  </div>
+</section>
+
+<section class="sec" id="company" aria-labelledby="company-h" style="background:var(--base-2)">
+  <div class="wrap profile-grid">
+    <div class="reveal">
+      <h2 class="h2" id="company-h">会社概要</h2>
+      <figure class="ph company-photo"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=700&q=72" alt="打ち合わせの成果を喜び合う二人" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></figure>
+    </div>
+    <dl class="profile reveal">
+<div><dt>商号</dt><dd>合同会社LOOP</dd></div>
+<!-- 【確認事項】代表者の役職名（合同会社のため「代表社員」と仮置き） -->
+<div><dt>代表者</dt><dd>代表社員　松山 勇也</dd></div>
+<div><dt>所在地</dt><dd>〒899-4312　鹿児島県霧島市国分山下町18-14</dd></div>
+<div><dt>事業内容</dt><dd>広告マーケティング業（人と人とのつながりを活かした広告企画事業およびリユース・リサイクル会社に特化した対面営業を活用したプロモーション支援サービス）</dd></div>
+<!-- 要確認：設立年月日・資本金・従業員数（未確認のため非表示）
+      <div><dt>設立</dt><dd></dd></div>
+      -->
+</dl>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__in">
+      <div><a class="logo" href="#top" aria-label="合同会社LOOP トップへ"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><circle cx="26" cy="16" r="2.8"/></svg><span class="logo__txt">LOOP<small>合同会社LOOP</small></span><!-- 【確認事項】英字ロゴは商号表記をテキストで組んだ仮ロゴです --></a><p class="footer__tag">つながりを、次の手へ。</p></div>
+      <nav aria-label="フッターメニュー"><ul><li><a href="#concept">考え方</a></li><li><a href="#business">事業内容</a></li><li><a href="#strength">強み</a></li><li><a href="#flow">進め方</a></li><li><a href="#message">代表メッセージ</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+    </div>
+    <small class="footer__copy">&copy; <span id="year">2026</span> 合同会社LOOP</small>
+  </div>
+</footer>
+<script>
+
+(function(){
+'use strict';
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $ = function(s, r){ return (r || document).querySelector(s); };
+var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+var hooks = [];
+function addScroll(f){ hooks.push(f); }
+function progress(){ var max = document.documentElement.scrollHeight - innerHeight; return max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0; }
+var revealHooks = {};
+function onReveal(id, f){ revealHooks[id] = f; }
+/* canvas loop boilerplate: DPR<=2, debounced resize, pause offscreen/hidden, still frame on reduced motion */
+function canvasLoop(cv, o){
+  if (!cv || !cv.getContext) return null;
+  var ctx = cv.getContext('2d'), host = o.host || cv.parentElement;
+  var api = {ctx:ctx, W:0, H:0, cv:cv};
+  var dpr = 1, running = false, visible = true, raf = 0, t0 = performance.now(), lastW = -1;
+  function resize(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = cv.clientWidth, H = cv.clientHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    api.W = W; api.H = H;
+    if (W !== lastW || o.rebuildOnHeight){ lastW = W; if (o.build) o.build(api); }
+  }
+  function loop(now){ if (!running) return; o.draw(api, (now - t0) / 1000); raf = requestAnimationFrame(loop); }
+  function start(){ if (running || reduce || !visible || document.hidden) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop(){ running = false; cancelAnimationFrame(raf); }
+  function still(){ o.draw(api, o.stillT || 99); }
+  api.still = still;
+  resize();
+  if (reduce) still(); else start();
+  var rt; addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ resize(); if (!running) still(); }, 150); });
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ visible = en[0].isIntersecting; if (visible) start(); else stop(); }).observe(host);
+  }
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) stop(); else start(); });
+  return api;
+}
+function rgba(c, a){ return 'rgba(' + c + ',' + a + ')'; }
+function clamp01(x){ return x < 0 ? 0 : x > 1 ? 1 : x; }
+function ease(t){ t = clamp01(t); return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+
+
+/* rail: a chain link joins for every section you pass */
+var rail = $('#rail'), rRead = $('#railRead'), secs = $$('main > section[id], main > figure'), links = [];
+function layoutLinks(){
+  links.forEach(function(l){ l.el.remove(); }); links = [];
+  var max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  secs.forEach(function(s){ var p = clamp01(s.offsetTop / max), el = document.createElement('i'); el.className = 'rail__link'; el.style.top = (p * 100) + '%'; rail.appendChild(el); links.push({p:p, el:el}); });
+}
+layoutLinks(); addEventListener('load', layoutLinks); addEventListener('resize', layoutLinks);
+addScroll(function(p){
+  var n = 0; links.forEach(function(l){ var on = p >= l.p - .002; l.el.classList.toggle('is-on', on); if (on) n++; });
+  rRead.textContent = 'link ' + String(n).padStart(2, '0');
+});
+/* hero: people travel the ring and hand a light to the next; small goods circle the other way inside */
+var LEAF = '115,194,140', INK = '236,238,228';
+var people = [], goods = [];
+canvasLoop($('#heroCanvas'), {
+  build: function(a){
+    var n = 14; people = [];
+    for (var i = 0; i < n; i++) people.push({a:i / n * Math.PI * 2, s:i});
+    goods = []; for (var j = 0; j < 22; j++) goods.push({a:j / 22 * Math.PI * 2, r:.5 + (j % 3) * .045, k:j % 2});
+  },
+  draw: function(a, t){
+    var c = a.ctx, W = a.W, H = a.H; c.clearRect(0, 0, W, H);
+    var cx = W / 2, cy = H / 2, R = Math.min(W, H) * .38;
+    var ring = ease(t / 2);
+    c.strokeStyle = rgba(LEAF, .6); c.lineWidth = 1.2;
+    c.beginPath(); c.arc(cx, cy, R, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * ring); c.stroke();
+    c.strokeStyle = rgba(INK, .12); c.setLineDash([2, 7]);
+    c.beginPath(); c.arc(cx, cy, R * .55, 0, 6.283); c.stroke(); c.setLineDash([]);
+    var rot = t * .12, gA = clamp01((t - 1.2) / 1);
+    /* goods (counter-rotating) */
+    goods.forEach(function(g){
+      var an = g.a - t * .2, rr = R * g.r;
+      var x = cx + Math.cos(an) * rr, y = cy + Math.sin(an) * rr;
+      c.save(); c.translate(x, y); c.rotate(an); c.fillStyle = rgba(g.k ? LEAF : INK, .35 * gA); c.fillRect(-3, -3, 6, 6); c.restore();
+    });
+    /* people + the handed light */
+    var pA = clamp01((t - 1.6) / 1), n = people.length;
+    var hop = (t * .9) % n, cur = Math.floor(hop), k = hop - cur;
+    people.forEach(function(p, i){
+      var an = p.a + rot, x = cx + Math.cos(an) * R, y = cy + Math.sin(an) * R;
+      var lit = i === cur ? 1 - k : (i === (cur + 1) % n ? k : 0);
+      c.fillStyle = rgba(INK, .9 * pA); c.beginPath(); c.arc(x, y, 4 + lit * 2, 0, 6.283); c.fill();
+      if (lit > 0){ var g = c.createRadialGradient(x, y, 0, x, y, 22); g.addColorStop(0, rgba(LEAF, .55 * lit * pA)); g.addColorStop(1, rgba(LEAF, 0)); c.fillStyle = g; c.beginPath(); c.arc(x, y, 22, 0, 6.283); c.fill(); }
+    });
+    if (pA > 0){
+      var a0 = people[cur].a + rot, a1 = people[(cur + 1) % n].a + rot, am = a0 + (((a1 - a0) % 6.283) + 6.283) % 6.283 * ease(k);
+      var hx = cx + Math.cos(am) * R, hy = cy + Math.sin(am) * R;
+      c.fillStyle = rgba(LEAF, pA); c.beginPath(); c.arc(hx, hy, 3.2, 0, 6.283); c.fill();
+      /* thin chord to the next person: the hand-off */
+      c.strokeStyle = rgba(LEAF, .25 * pA); c.beginPath();
+      c.moveTo(cx + Math.cos(a0) * R, cy + Math.sin(a0) * R); c.lineTo(cx + Math.cos(a1) * R, cy + Math.sin(a1) * R); c.stroke();
+    }
+  }
+});
+
+
+/* header + rail (rAF-throttled) */
+var header = $('#header'), ticking = false;
+function onScroll(){ header.classList.toggle('is-scrolled', scrollY > 40); var p = progress(); hooks.forEach(function(f){ f(p); }); ticking = false; }
+addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+addEventListener('resize', onScroll);
+addEventListener('load', onScroll);
+onScroll();
+/* band parallax */
+var bandImg = $('.band img');
+if (bandImg && !reduce){ addScroll(function(){
+  var r = bandImg.parentElement.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > innerHeight) return;
+  var k = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+  bandImg.style.transform = 'translateY(' + (k * -40).toFixed(1) + 'px)';
+}); }
+/* menu */
+var btn = $('#menuBtn'), nav = $('#gnav');
+function setMenu(open){
+  btn.setAttribute('aria-expanded', String(open));
+  btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  nav.classList.toggle('is-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open){ var f = nav.querySelector('a'); if (f) f.focus(); }
+}
+btn.addEventListener('click', function(){ setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+nav.addEventListener('click', function(e){ if (e.target.closest('a') && nav.classList.contains('is-open')) setMenu(false); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && nav.classList.contains('is-open')){ setMenu(false); btn.focus(); } });
+matchMedia('(min-width:901px)').addEventListener('change', function(m){ if (m.matches) setMenu(false); });
+/* reveal: one-shot */
+var targets = $$('.reveal, .draw, .steps, .biz');
+function hit(el){ el.classList.add('is-in'); if (el.id && revealHooks[el.id]) revealHooks[el.id](el); }
+if ('IntersectionObserver' in window && !reduce){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (!en.isIntersecting) return; hit(en.target); io.unobserve(en.target); });
+  }, {threshold:.18, rootMargin:'0px 0px -6% 0px'});
+  targets.forEach(function(t){ io.observe(t); });
+} else { targets.forEach(hit); }
+/* entrance + year */
+requestAnimationFrame(function(){ requestAnimationFrame(function(){ document.body.classList.add('is-loaded'); }); });
+var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
+})();
+
+</script>
+</body>
+</html>
